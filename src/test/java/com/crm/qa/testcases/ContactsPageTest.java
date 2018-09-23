@@ -12,7 +12,7 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
 public class ContactsPageTest extends BaseClass {
-
+//ssh key
 
 	HomePage homepage;
 	ContactsPage contactspage;
