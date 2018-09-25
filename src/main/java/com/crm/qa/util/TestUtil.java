@@ -26,7 +26,7 @@ public class TestUtil extends BaseClass {
 	public static Object[][] getTestData(String sheetName) {
 
 		try {
-			File file = new File("E:\\Selenium\\DataProvider\\Data_Sheet.xlsx");
+			File file = new File("E:\\SeleniumEclipse\\MavenProject\\src\\test\\resources\\Data_Sheet.xlsx");
 			 fis = new FileInputStream(file);
 			wb = WorkbookFactory.create(fis);
 			sh = wb.getSheet(sheetName);
