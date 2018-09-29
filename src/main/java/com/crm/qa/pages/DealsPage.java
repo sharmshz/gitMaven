@@ -1,5 +1,6 @@
 package com.crm.qa.pages;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,6 +26,7 @@ public class DealsPage extends BaseClass {
 	@FindBy(xpath="//input[@type='submit']")
 	WebElement save;
 	
+
 	
 	public DealsPage()
 	{
@@ -42,14 +44,11 @@ public class DealsPage extends BaseClass {
 		save.click();
 		
 		
-		
-		
-		
-		
 	}
 	
 	
+	}
 	
 	
 
-}
+

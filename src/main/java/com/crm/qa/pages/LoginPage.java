@@ -38,11 +38,15 @@ public class LoginPage extends BaseClass {
 		return new HomePage();
 	}
 
-	public RegistrationPage verifySignUpLink() {
-		ExplicitWait.elementToBeClickable(10, signUpBtn);
-		signUpBtn.click();
+	public String verifySignUpLink() {
+		
+	
+		
+		action.moveToElement(signUpBtn).click().build().perform();
+		
+		return driver.getCurrentUrl();
 
-		return new RegistrationPage();
+		
 
 	}
 
@@ -56,8 +60,11 @@ public class LoginPage extends BaseClass {
 	public void PerformLogin() {
 		username.sendKeys(prop.getProperty("username"));
 		password.sendKeys(prop.getProperty("password"));
-		ExplicitWait.elementToBeClickable(10, loginBtn);
-		loginBtn.click();
+		js.executeScript("arguments[0].click();",loginBtn);
+	
+		
+		
+		
 
 	}
 

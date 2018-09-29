@@ -47,8 +47,9 @@ public class LoginPageTest extends BaseClass {
 	@Test(priority = 3)
 	public void verifySignUpLink() {
 
-		registrationpage = loginpage.verifySignUpLink();
-
+	String cURL= loginpage.verifySignUpLink();
+	Assert.assertEquals(cURL, "https://www.freecrm.com/register/");
+	
 	}
 
 	@Test(priority = 4)

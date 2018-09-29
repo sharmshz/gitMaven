@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -17,6 +19,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static Actions action;	
+	public static JavascriptExecutor js;
 
 	public BaseClass() {
 		try {
@@ -38,12 +41,27 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\BrowserDriver\\chromedriver.exe");
 			driver = new ChromeDriver();
 			action=new Actions(driver);
+			 js=(JavascriptExecutor)driver;
+			
+		
 			
 		}
 		else if (browser.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver", "E:\\Selenium\\BrowserDriver\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
+			action=new Actions(driver);
+			 js=(JavascriptExecutor)driver;
+			
 		}
+		else if (browser.equalsIgnoreCase("html")) {
+		//	System.setProperty("webdriver.ie.driver", "E:\\Selenium\\BrowserDriver\\IEDriverServer.exe");
+			driver = new HtmlUnitDriver();
+			action=new Actions(driver);
+			 js=(JavascriptExecutor)driver;
+			
+		}
+		
+		
 		
 		else
 		{

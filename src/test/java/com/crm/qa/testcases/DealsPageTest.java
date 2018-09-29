@@ -45,6 +45,7 @@ public class DealsPageTest extends BaseClass {
 		
 		
 	}
+
 	
 	
 	@AfterMethod

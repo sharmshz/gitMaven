@@ -29,6 +29,8 @@ public class HomePage extends BaseClass {
 	
 	
 	public void ClickOnNewContact() {		
+		
+		
 		action.moveToElement(contacts).build().perform();
 		newContact.click();		
 		
