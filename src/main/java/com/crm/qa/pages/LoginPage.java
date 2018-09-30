@@ -45,6 +45,7 @@ public class LoginPage extends BaseClass {
 		action.moveToElement(signUpBtn).click().build().perform();
 		
 		return driver.getCurrentUrl();
+		
 
 		
 

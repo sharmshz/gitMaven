@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <test thread-count="5" verbose="0" name="Regression Test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" verbose="0" name="Regression Test(failed)" parallel="classes">
     <classes>
+      <class name="com.crm.qa.testcases.ContactsPageTest">
+        <methods>
+          <include name="verifyNewContact" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
       <class name="com.crm.qa.testcases.DealsPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyCreateDeal" invocation-numbers="0 1 3"/>
+          <include name="verifyCreateDeal" invocation-numbers="0 1 2 3"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.DealsPageTest -->
@@ -15,17 +22,9 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="PricingLink"/>
-          <include name="verifyLoginTest"/>
           <include name="verifySignUpLink"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->
-      <class name="com.crm.qa.testcases.ContactsPageTest">
-        <methods>
-          <include name="verifyNewContact" invocation-numbers="1 2 3 4"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
     </classes>
   </test> <!-- Regression Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
